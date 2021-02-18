@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <div>
+<!--heading of survey form-->
+    <h1 id="title">CodeCamp survey</h1>
+<!--description of survey-->
+    <p id="description">Help us get to know you, please fill in all fields correctly</p>
+    <form id="survey-form">
+        <label for="name" id="name-label" class="labels">Name:</label>
+        <div class="right">
+            <input type="text" id="name" placeholder="Enter your name" class="input" required>
+        </div>
+            <br><br>
+        <label for="email" id="email-label" class="labels">Email:</label>
+        <div class="right">
+            <input type="email" id="email" placeholder="Enter your email" class="input" required>
+        </div>
+            <br><br>
+        <label for="number" id="number-label" class="labels">Phone:</label>
+        <div class="right">
+            <input type="number" id="number" min="7" max="15" placeholder="Enter your number" class="input">
+        </div>
+            <br><br>
+<!--radio buttons-->
+        <label for="radio" class="labels">sex:</label>
+             <label for="male">Male</label>
+                <input type="radio" id="male" value="male" name="gender">
+             <label for="female">female</label>
+                <input type="radio" id="female" value="female" name="gender">
+                <br><br>
+ <!--dropdown-->
+        <label for="dropdown" class="labels">Age range:</label>
+        <div class="right">
+        <select id="dropdown" class="input" name="Agerange">
+            <option disabled value="select"> Select an option </option>
+            <option value="13-19">13-19</option>
+            <option value="20-25">20-25</option>
+            <option value="26-30">26-30</option>
+            <option value="30-35">30-35</option>
+        </select>   
+        </div>
+        <br><br>
+<!--checkboxes-->
+        <label for="languages" class="labels">what programming languages do you know/have learned? (check all that apply)</label>
+        <ul id="languages" class="right" style="list-style: none">
+            <li class="checkbox"><label><input type="checkbox" id="Java" value="1">Java</label></input></li>
+            <li class="checkbox"><label><input type="checkbox" id="Javascript" value="2">Javascript</label></input></li>
+            <li class="checkbox"><label><input type="checkbox" id="Python" value="3">Python</label></input></li>
+            <li class="checkbox"><label><input type="checkbox" id="Ruby"value="4">Ruby</label></input></li>
+            <li class="checkbox"><label><input type="checkbox" id="C++" value="5">C++</label></input></li>
+            <li class="checkbox"><label><input type="checkbox" id="#C" value="6">#C</label></input></li>
+          </ul>
+<!--comments-->
+        <label for="comment" class="labels"> Any Comments or Suggestions? </label>
+        <textarea name="comment" rows="8" columns="60" class="input right" placeholder="Enter comments here..."></textarea>
+        <br><br>
+<!--submit button-->
+        <button type="submit" id="submit">Submit</button>
+        <p>If you click the "Submit" button, the form-data will be saved to our database.</p>
+    </form>
+    </div>
+</body>
